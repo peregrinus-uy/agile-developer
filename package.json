@@ -1,0 +1,29 @@
+{
+  "name": "car-insurance-calculator",
+  "version": "1.0.0",
+  "description": "Car insurance calculator as a service",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/san650/agile-development-workshop.git"
+  },
+  "keywords": [
+    "agile",
+    "development",
+    "scrum",
+    "xp",
+    "tdd",
+    "bdd",
+    "ci",
+    "git"
+  ],
+  "author": "Santiago Ferreira <san650@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/san650/agile-development-workshop/issues"
+  },
+  "homepage": "https://github.com/san650/agile-development-workshop#readme"
+}
