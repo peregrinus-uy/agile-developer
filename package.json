@@ -2,8 +2,9 @@
   "name": "car-insurance-calculator",
   "version": "1.0.0",
   "description": "Car insurance calculator as a service",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node api/index.js",
     "test": "mocha"
   },
   "repository": {
@@ -25,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/san650/agile-development-workshop/issues"
   },
-  "homepage": "https://github.com/san650/agile-development-workshop#readme"
+  "homepage": "https://github.com/san650/agile-development-workshop#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
 }
