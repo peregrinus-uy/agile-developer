@@ -28,7 +28,9 @@
   },
   "homepage": "https://github.com/san650/agile-development-workshop#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "mocha": "^3.4.2",
