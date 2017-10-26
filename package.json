@@ -1,15 +1,16 @@
 {
-  "name": "car-insurance-calculator",
+  "name": "reporte-de-incidentes",
   "version": "1.0.0",
-  "description": "Car insurance calculator as a service",
+  "description": "Peregrinus: reporte de incidentes",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "concurrently \"nodemon app.js\" \"browser-sync start --proxy 'localhost:3000' --files **\"",
+    "startold": "nodemon app.js",
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/san650/agile-development-workshop.git"
+    "url": "git+https://github.com/san650/workshop.git"
   },
   "keywords": [
     "agile",
@@ -24,18 +25,20 @@
   "author": "Santiago Ferreira <san650@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/san650/agile-development-workshop/issues"
+    "url": "https://github.com/san650/workshop/issues"
   },
-  "homepage": "https://github.com/san650/agile-development-workshop#readme",
+  "homepage": "https://github.com/san650/workshop#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "mustache": "^2.3.0",
-    "mustache-express": "^1.2.5",
+    "express-handlebars": "^3.0.0",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "concurrently": "^3.5.0",
     "mocha": "^3.4.2",
+    "nodemon": "^1.12.1",
     "selenium-webdriver": "^3.5.0",
     "supertest": "^3.0.0"
   }

@@ -1,6 +1,5 @@
 var uuid = require("uuid/v1");
-
-var db = {};
+var db = require('./users.json');
 
 function add(user) {
   var id = null;
@@ -20,15 +19,20 @@ function add(user) {
 }
 
 function get(user_id) {
-  return db[user_id];
+  return db.find(user => user.id == user_id);
 }
 
 function reset() {
   db = {};
 }
 
+function getAll() {
+  return db;
+}
+
 module.exports = {
   add: add,
   get: get,
-  reset: reset
+  reset: reset,
+  getAll: getAll
 };
