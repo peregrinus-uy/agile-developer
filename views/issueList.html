@@ -1,4 +1,17 @@
-{{#each issues}}
-  <a href="/issue/{{id}}">{{title}}</a> <br/>
-  {{description}} <br/>
-{{/each}}
+<h1 class="title">
+  <span class="title__label">
+    Lista de incidentes
+  </span>
+</h1>
+
+<section>
+  <ul class="issue-list">
+  {{#each issues}}
+    <li class="issue-item">
+      <a href="/issue/{{id}}" class="issue-item__link">
+        {{title}}
+      </a>
+    </li>
+  {{/each}}
+  </ul>
+</section>

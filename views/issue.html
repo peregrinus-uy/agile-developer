@@ -1,9 +1,22 @@
-<strong></strong>{{issue.title}}</strong>
-<br/>
-{{issue.description}}
-<br/>
-<i>{{issue.label}}</i>
+<h1 class="title">
+  <span class="title__label">
+    {{issue.title}}
+  </span>
+</h1>
 
-<br/>
-<br/>
-<a href="/issue">Back</a>
+<section class="issue">
+  <p class="issue__description">
+    {{issue.description}}
+
+    <i>{{issue.label}}</i>
+  </p>
+
+  <div class="issue__actions">
+    <a href="/issue" class="btn" title="volver">
+      Volver
+    </a>
+    <button class="btn btn--red">
+      Cerrar issue
+    </button>
+  </div>
+</section>
