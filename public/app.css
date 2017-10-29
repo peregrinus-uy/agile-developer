@@ -78,6 +78,11 @@ body {
 .issue__footer {
 }
 
+/* dashboard */
+.dashboard {
+  padding: .5rem 3rem;
+}
+
 /* title */
 .title {
   background: var(--color-gray-light);
