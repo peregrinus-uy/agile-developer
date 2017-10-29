@@ -1,0 +1,13 @@
+<form action="/issues/new" method="post">
+  <input type="text" name="issue[title]" value="{{issue.title}}" placeholder="Title...">
+  {{#if errors.title}}
+    <span>{{errors.title}}</span>
+  {{/if}}
+
+  <textarea name="issue[description]" placeholder="Description...">{{issue.description}}</textarea>
+  {{#if errors.description}}
+    <span>{{errors.description}}</span>
+  {{/if}}
+
+  <button>Submit</button>
+</form>

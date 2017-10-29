@@ -5,15 +5,12 @@ class BaseStore {
     this.db = data;
   }
 
-  add(entity) {
-    const id = user.id || uuid();
+  add(original) {
+    const entity = Object.assign({}, original, { id: uuid() });
 
-    this.db.push({
-      id: id,
-      name: user.name
-    });
+    this.db.push(entity);
 
-    return this.db[id];
+    return entity;
   }
 
   get(entity_id) {

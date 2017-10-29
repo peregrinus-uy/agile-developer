@@ -7,7 +7,7 @@ function loadRoutes(app) {
     res.send('12345');
   });
 
-  app.use('/issue', require('./issue'));
+  app.use('/issues', require('./issue'));
 }
 
 module.exports = loadRoutes;
