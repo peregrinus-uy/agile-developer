@@ -1,11 +1,13 @@
 <h1 class="title">
   <span class="title__label">
-    Lista de incidentes
+    Issues
   </span>
 </h1>
 
-<section>
-  <ul class="issue-list">
+<section class="issue-list">
+  <a href="/issues/new">Add new issue</a>
+
+  <ul>
   {{#each issues}}
     <li class="issue-item">
       <a href="/issues/{{id}}" class="issue-item__link">

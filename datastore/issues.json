@@ -7,14 +7,14 @@
     "label": "bug"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Support transitive noparse",
     "description": "I would like to be able to indicate that a module must no be parsed inside the module itself.",
     "authorId": 2,
     "label": "performance"
   },
   {
-    "id": 1,
+    "id": 3,
     "title": "ProvidePlugin doesn't work on modules that have 'polyfill guards'",
     "description": "If a module polyfills an API, e.g. fetch, the module code might check if window.fetch is already defined:",
     "authorId": 2,
