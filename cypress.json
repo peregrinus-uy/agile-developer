@@ -1,3 +1,10 @@
 {
-  "baseUrl": "http://localhost:3000"
+  "baseUrl": "http://localhost:3000",
+  "videoRecording": false,
+  "fixturesFolder": false,
+  "integrationFolder": "test",
+  "screenshotsFolder": "test/screenshots",
+  "supportFile": "test/support",
+  "videosFolder": "test/videos",
+  "ignoreTestFiles": "!*_spec.js"
 }

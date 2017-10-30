@@ -4,7 +4,7 @@
   "description": "Peregrinus: reporte de incidentes",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently \"nodemon app.js\" \"browser-sync start --proxy 'localhost:3000' --files **\"",
+    "start": "concurrently \"nodemon app.js\" \"browser-sync start --proxy 'localhost:3000' --files public/** routes/**\"",
     "startold": "nodemon app.js",
     "test": "mocha"
   },

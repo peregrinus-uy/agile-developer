@@ -1,39 +1,6 @@
 const BaseStore = require('./base.store');
 const issues = require('./issues.json');
-
-const Changeset = {
-  create(entity) {
-    return {
-      entity: Object.assign({}, entity),
-      errors: {},
-      isValid() {
-        return !Object.keys(this.errors).length;
-      }
-    };
-  },
-
-  trimValue(changeset, field) {
-    var value = this.getValue(changeset, field);
-
-    if (typeof value === 'string') {
-      this.setValue(changeset, field, value.trim());
-    }
-  },
-
-  validateRequired(changeset, field) {
-    if (!this.getValue(changeset, field)) {
-      changeset.errors[field] = `${field} is required.`;
-    }
-  },
-
-  getValue(changeset, field) {
-    return changeset.entity[field];
-  },
-
-  setValue(changeset, field, value) {
-    changeset.entity[field] = value;
-  }
-};
+const { create, trimValue, validateRequired } = require('./changeset');
 
 class IssueStore extends BaseStore {
   constructor() {
@@ -41,14 +8,12 @@ class IssueStore extends BaseStore {
   }
 
   add(issue) {
-    const changeset = Changeset.create(issue);
-    console.log('changeset before', changeset);
+    const changeset = create(issue);
 
-    Changeset.trimValue(changeset, 'title');
-    Changeset.trimValue(changeset, 'description');
-    console.log('changeset after', changeset);
-    Changeset.validateRequired(changeset, 'title');
-    Changeset.validateRequired(changeset, 'description');
+    trimValue(changeset, 'title');
+    trimValue(changeset, 'description');
+    validateRequired(changeset, 'title');
+    validateRequired(changeset, 'description');
 
 
     if (changeset.isValid()) {
