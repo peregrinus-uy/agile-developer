@@ -18,7 +18,7 @@ class BaseStore {
   }
 
   reset() {
-    this.db = {};
+    this.db = [];
   }
 
   getAll() {
