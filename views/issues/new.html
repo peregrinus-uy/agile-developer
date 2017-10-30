@@ -1,13 +1,38 @@
-<form action="/issues/new" method="post">
-  <input type="text" name="issue[title]" value="{{issue.title}}" placeholder="Title...">
-  {{#if errors.title}}
-    <span>{{errors.title}}</span>
-  {{/if}}
+<h1 class="title">
+  <span class="title__label">
+    New issue
+  </span>
+</h1>
 
-  <textarea name="issue[description]" placeholder="Description...">{{issue.description}}</textarea>
-  {{#if errors.description}}
-    <span>{{errors.description}}</span>
-  {{/if}}
+<section class="form">
+  <form action="/issues/new" method="post">
+    <div class="form__field">
+      <input type="text" name="issue[title]" value="{{issue.title}}" placeholder="Title..." class="form__input">
+      {{#if errors.title}}
+        <span class="form__error">
+          {{errors.title}}
+        </span>
+      {{/if}}
+    </div>
 
-  <button>Submit</button>
-</form>
+    <div class="form__field">
+      <textarea name="issue[description]" placeholder="Description..." class="form__textarea" rows="10">{{issue.description}}</textarea>
+
+      {{#if errors.description}}
+        <span class="form__error">
+          {{errors.description}}
+        </span>
+      {{/if}}
+    </div>
+
+    <div class="form__actions">
+      <a href="/issues" class="btn">
+        Cancel
+      </a>
+
+      <button type="submit" class="btn btn--green">
+        Submit
+      </button>
+    </div>
+  </form>
+</section>
