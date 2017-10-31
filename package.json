@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test:e2e": "node test/run.js",
-    "test": "npm run test:e2e"
+    "test": "node test/run.js"
   },
   "repository": {
     "type": "git",
