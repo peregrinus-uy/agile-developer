@@ -15,6 +15,4 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(process.cwd() + '/public'));
 routes(app);
 
-app.listen(3000, function() {
-  console.log('http://localhost:3000');
-});
+module.exports = app;

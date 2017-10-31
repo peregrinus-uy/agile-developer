@@ -4,9 +4,9 @@
   "description": "Peregrinus: reporte de incidentes",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently \"nodemon app.js\" \"browser-sync start --proxy 'localhost:3000' --files public/** routes/**\"",
-    "startold": "nodemon app.js",
-    "test": "mocha"
+    "start": "nodemon index.js",
+    "test:e2e": "node test/run.js",
+    "test": "npm run test:e2e"
   },
   "repository": {
     "type": "git",
@@ -35,12 +35,7 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "concurrently": "^3.5.0",
     "cypress": "^1.0.2",
-    "mocha": "^3.4.2",
-    "nodemon": "^1.12.1",
-    "selenium-webdriver": "^3.5.0",
-    "supertest": "^3.0.0"
+    "nodemon": "^1.12.1"
   }
 }
