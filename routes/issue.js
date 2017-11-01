@@ -1,5 +1,5 @@
 const express = require('express');
-const { issueStore } = require('../datastore');
+const { issueStore, severityStore } = require('../datastore');
 const router = express.Router();
 
 router.get('/', function(req, res) {
@@ -10,17 +10,19 @@ router.get('/', function(req, res) {
 router.get('/new', function(req, res) {
   const issue = {};
   const errors = {};
+  const severities = severityStore.getAll();
 
-  res.render('issues/new', { issue, errors });
+  res.render('issues/new', { issue, errors, severities });
 });
 
 router.post('/new', function(req, res) {
   var changeset = issueStore.add(req.body.issue);
+  const severities = severityStore.getAll();
 
   if (changeset.isValid()) {
     res.redirect('/issues');
   } else {
-    res.render('issues/new', { issue: changeset.entity, errors: changeset.errors });
+    res.render('issues/new', { issue: changeset.entity, errors: changeset.errors, severities });
   }
 });
 

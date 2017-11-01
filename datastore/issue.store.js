@@ -1,5 +1,5 @@
 const BaseStore = require('./base.store');
-const issues = require('./issues.json');
+const issues = require('./initial-data/issues.json');
 const { create, trimValue, validateRequired } = require('./changeset');
 
 class IssueStore extends BaseStore {
@@ -14,6 +14,7 @@ class IssueStore extends BaseStore {
     trimValue(changeset, 'description');
     validateRequired(changeset, 'title');
     validateRequired(changeset, 'description');
+    validateRequired(changeset, 'severity');
 
 
     if (changeset.isValid()) {

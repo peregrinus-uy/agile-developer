@@ -2,6 +2,7 @@
 :root {
   --color-white: #fff;
   --color-gray-light: #fbfbfb;
+  --color-gray: #e0e0e0;
   --color-gray-dark: #444;
   --color-red: #8E0000;
   --color-red-dark: #3F0000;
@@ -128,6 +129,12 @@ body {
   padding: .5rem var(--padding-horizontal);
 }
 
+.issue__severity {
+  background: var(--color-gray);
+  padding: 4px 12px;
+  border-radius: 32px;
+}
+
 .issue__description {
   font-size: 1rem;
   padding: 1rem 0;
@@ -224,6 +231,7 @@ body {
   text-align: right;
 }
 
+.form__select,
 .form__input,
 .form__textarea {
   display: block;
