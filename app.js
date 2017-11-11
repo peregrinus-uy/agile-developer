@@ -12,9 +12,7 @@ app.engine('.html', exphbs({ extname: '.html', defaultLayout: 'main.html' }));
 app.set('view engine', '.html');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static(process.cwd() + '/public'));
+app.use(express.static(__dirname + '/public'));
 routes(app);
 
-app.listen(3000, function() {
-  console.log('http://localhost:3000');
-});
+module.exports = app;
