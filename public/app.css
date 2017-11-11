@@ -11,6 +11,9 @@
   --color-border: #f0f0f0;
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --padding-horizontal: 3rem;
+
+  --alternate-background: #fbfbfb;
+  --alternate-foreground: #42526e;
 }
 
 /* reset */
@@ -38,10 +41,12 @@ button {
 }
 
 /* base */
+
 html,
 body {
   font-size: 14px;
   line-height: 1.5;
+  height: 100%;
 }
 
 body {
@@ -52,7 +57,7 @@ body {
 }
 
 /* responsive */
-@media (max-width: 599px) {
+@media (max-width: 730px) {
   :root {
     --padding-horizontal: .5rem;
   }
@@ -65,6 +70,48 @@ body {
 /* layout */
 .layout {
   max-width: 100vw;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__header {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.layout__body {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+@media (max-width: 730px) {
+  .layout__body {
+    display: block;
+  }
+}
+
+.layout__footer {
+  flex: 0 0 auto;
+}
+
+/* body */
+.body {
+  flex: 1 1 auto;
+}
+
+/* aside */
+.aside {
+  flex: 0 0 auto;
+  width: 15rem;
+  color: var(--alternate-foreground);
+  background: var(--alternate-background);
+}
+
+@media (max-width: 730px) {
+  .aside {
+    width: 100%;
+  }
 }
 
 /* header */
@@ -74,13 +121,14 @@ body {
 
   background-color: var(--color-gray-dark);
   color: var(--color-white);
+  box-shadow: 0px 3px 3px rgba(0,0,0,.5);
   padding: 1rem 2rem;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 730px) {
   .header {
     padding: .5rem .5rem;
   }
@@ -99,7 +147,7 @@ body {
 /* issue-item */
 .issue-item {
   font-size: 1rem;
-  max-width: 600px;
+  max-width: 800px;
   border: 1px solid var(--color-border);
 }
 .issue-item:hover {
@@ -138,11 +186,11 @@ body {
 .issue__description {
   font-size: 1rem;
   padding: 1rem 0;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .issue__actions {
-  max-width: 600px;
+  max-width: 800px;
   text-align: right;
 }
 
@@ -153,12 +201,13 @@ body {
 
 /* title */
 .title {
-  background: var(--color-gray-light);
-  padding: 2rem var(--padding-horizontal);
+  /*background: var(--color-gray-light);*/
+  padding: 1rem var(--padding-horizontal);
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--color-border);
 }
 
-@media (max-width: 599px) {
+@media (max-width: 730px) {
   .title {
     text-align: center;
   }
@@ -188,7 +237,7 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 730px) {
   .btn {
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -227,7 +276,7 @@ body {
 }
 
 .form__actions {
-  max-width: 600px;
+  max-width: 800px;
   text-align: right;
 }
 
@@ -236,7 +285,7 @@ body {
 .form__textarea {
   display: block;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   font-family: var(--font-family);
   font-size: 18px;
   line-height: 1.5;
@@ -247,4 +296,17 @@ body {
 .form__textarea {
   resize: none;
   overflow: auto;
+}
+
+/* site-menu */
+.site-menu {
+  padding: 10px;
+}
+
+@media (max-width: 730px) {
+  .site-menu__title,
+  .site-menu__items,
+  .site-menu__item {
+    display: inline-block;
+  }
 }
