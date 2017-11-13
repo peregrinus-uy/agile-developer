@@ -14,39 +14,52 @@ describe('User adds a new issue', function() {
   });
 
   it('User adds a new issue', function() {
-    cy.visit('/issues/new');
+    cy.visit('/issues');
+    cy.get(selector('add-issue')).click();
 
     cy.get('[name="issue[title]"]').type('Blue screen in Windows Vista');
+    cy.get('[name="issue[severity]"]').select('High');
     cy.get('[name="issue[description]"').type('When I try to play solitaire in Windows, it crash with a blue screen');
     cy.get('button').click();
 
-    cy.root().should('contain', 'Blue screen in Windows Vista');
+    cy.contains('Blue screen in Windows Vista');
   });
 
   it('User adds a new issue (II)', function() {
     visit('/issues/new');
 
     fillIn('title', 'Blue screen in Windows Vista');
+    select('severity', 'High');
     fillIn('description', 'When I try to play solitaire in Windows, it crash with a blue screen');
 
     click('button');
 
-    page().should('contain', 'Blue screen in Windows Vista');
+    assert_text('Blue screen in Windows Vista');
   });
 });
+
+function selector(value) {
+  return `[data-test-${value}]`;
+}
 
 function visit(path) {
   return cy.visit(path);
 }
 
 function fillIn(name, value) {
+  cy.log(cy.get(`[name="issue[${name}]"]`));
+  console.info(cy.get(`[name="issue[${name}]"]`));
   return cy.get(`[name="issue[${name}]"]`).type(value);
+}
+
+function select(name, value) {
+  return cy.get(`[name="issue[${name}]"]`).select(value);
 }
 
 function click(selector) {
   return cy.get(selector).click();
 }
 
-function page() {
-  return cy.root();
+function assert_text(text) {
+  cy.contains(text);
 }
