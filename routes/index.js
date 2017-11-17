@@ -1,4 +1,6 @@
 function loadRoutes(app) {
+  const issuesDB = require('../datastore/issue.store');
+
   app.get('/', function(req, res) {
     res.render('index', { currentDate: new Date().toLocaleDateString() });
   });
@@ -12,13 +14,14 @@ function loadRoutes(app) {
   // FIXME: Test to enable only on test.
   // if (process.env.NODE_ENV === 'test') {
   app.post('/test/reset', function(req, res) {
-    require('../datastore/issue.store').reset();
+    issuesDB.reset();
+
     res.send('OK');
   });
 
   app.post('/test/seed', function(req, res) {
-    console.log(req.body);
-    require('../datastore/issue.store').add(req.body);
+    issuesDB.add(req.body);
+
     res.send('OK');
   });
 }

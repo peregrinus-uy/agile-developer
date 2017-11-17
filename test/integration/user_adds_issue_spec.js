@@ -47,8 +47,6 @@ function visit(path) {
 }
 
 function fillIn(name, value) {
-  cy.log(cy.get(`[name="issue[${name}]"]`));
-  console.info(cy.get(`[name="issue[${name}]"]`));
   return cy.get(`[name="issue[${name}]"]`).type(value);
 }
 
