@@ -14,10 +14,7 @@ app.engine(
 		extname: '.html',
 		defaultLayout: 'main.html',
 		helpers: {
-			isSelected: (val1, val2, className) => {
-        console.info('isSelected', val1, val2, className);
-        return val1 === val2 && className;
-      }
+			isSelected: (val1, val2, className) => val1 === val2 && className
 		}
 	})
 );
