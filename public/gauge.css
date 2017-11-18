@@ -1,0 +1,38 @@
+.metric {
+  flex: 1;
+  max-width: 350px;
+  padding: 10px;
+}
+
+.metric path {
+  stroke-width: 75;
+  stroke: #ecf0f1;
+  fill: none;
+}
+
+/* Critical */
+.metric.critical path.data-arc {
+  stroke: #e74c3c;
+}
+
+.metric.critical text {
+  fill: #e74c3c;
+}
+
+/*  */
+.metric.high path.data-arc {
+  stroke: #3498db;
+}
+
+.metric.high text {
+  fill: #3498db;
+}
+
+/*  */
+.metric.medium path.data-arc {
+  stroke: #27ae60;
+}
+
+.metric.medium text {
+  fill: #27ae60;
+}
