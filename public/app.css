@@ -144,6 +144,20 @@ body {
   padding: .5rem var(--padding-horizontal);
 }
 
+.issue-list__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.issue-list__header span a:visited {
+  color: unset;
+}
+
+.issue-list__header span a.selected {
+  font-weight: bold;
+}
+
 /* issue-item */
 .issue-item {
   font-size: 1rem;

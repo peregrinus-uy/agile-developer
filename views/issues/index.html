@@ -5,7 +5,14 @@
 </h1>
 
 <section class="issue-list">
-  <a href="/issues/new">Add new issue</a>
+
+  <div class="issue-list__header">
+    <span>
+      <a href="/issues?is=open" class={{isSelected status 'open' 'selected'}}>{{openCount}} Open</a> /
+      <a href="/issues?is=closed" class={{isSelected status 'closed' 'selected'}}>{{closedCount}} Closed</a>
+    </span>
+    <a class="btn btn--green" href="/issues/new">Add new issue</a>
+  </div>
 
   <ul>
   {{#each issues}}
