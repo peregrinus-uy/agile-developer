@@ -1,8 +1,8 @@
-const issueDB = require('../datastore/issue.store');
+const issuesDB = require('../datastore/issue.store');
 
 function loadRoutes(app) {
 	app.get('/', function(req, res) {
-		const issues = issueDB.getAll();
+		const issues = issuesDB.getAll();
 		const criticalIssues = issues.filter(issue => issue.severity === 'Critical');
 		const highIssues = issues.filter(issue => issue.severity === 'High');
 		const mediumIssues = issues.filter(issue => issue.severity === 'Medium');
