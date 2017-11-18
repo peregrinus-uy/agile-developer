@@ -1,8 +1,8 @@
-const issueStore = require('../datastore/issue.store');
+const issueDB = require('../datastore/issue.store');
 
 function loadRoutes(app) {
 	app.get('/', function(req, res) {
-		const issues = issueStore.getAll();
+		const issues = issueDB.getAll();
 		const criticalIssues = issues.filter(issue => issue.severity === 'Critical');
 		const highIssues = issues.filter(issue => issue.severity === 'High');
 		const mediumIssues = issues.filter(issue => issue.severity === 'Medium');
@@ -20,18 +20,19 @@ function loadRoutes(app) {
 
 	app.use('/issues', require('./issue'));
 
-	// FIXME: Test to enable only on test.
-	// if (process.env.NODE_ENV === 'test') {
-	app.post('/test/reset', function(req, res) {
-		issueStore.reset();
-		res.send('OK');
-	});
+  // FIXME: Test to enable only on test.
+  // if (process.env.NODE_ENV === 'test') {
+  app.post('/test/reset', function(req, res) {
+    issuesDB.reset();
 
-	app.post('/test/seed', function(req, res) {
-		console.log(req.body);
-		issueStore.add(req.body);
-		res.send('OK');
-	});
+    res.send('OK');
+  });
+
+  app.post('/test/seed', function(req, res) {
+    issuesDB.add(req.body);
+
+    res.send('OK');
+  });
 }
 
 module.exports = loadRoutes;
