@@ -18,3 +18,19 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(function() {
+  // Cleanup database
+  cy.request('POST', '/test/reset');
+  cy.request({
+    method: 'POST',
+    url: '/test/seed',
+    body: {
+      title: 'foo',
+      description: 'bar',
+      severity: 'Critical',
+      status: 'open'
+    },
+    form: true,
+  });
+});

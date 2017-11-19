@@ -9,14 +9,15 @@ const routes = require('./routes');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.engine(
-	'.html',
-	exphbs({
-		extname: '.html',
-		defaultLayout: 'main.html',
-		helpers: {
-			isSelected: (val1, val2, className) => val1 === val2 && className
-		}
-	})
+  '.html',
+  exphbs({
+    extname: '.html',
+    defaultLayout: 'main.html',
+    helpers: {
+      isSelected: (val1, val2, className) => val1 === val2 && className,
+      equal: (val1, val2, options) => val1 === val2 ? options.fn(this) : null
+    }
+  })
 );
 app.set('view engine', '.html');
 app.set('views', path.join(__dirname, 'views'));

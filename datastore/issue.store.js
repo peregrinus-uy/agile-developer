@@ -23,6 +23,12 @@ class IssueStore extends BaseStore {
 
     return changeset;
   }
+
+  update(issue) {
+    const changeset = create(issue);
+    changeset.entity = super.update(changeset.entity);
+    return changeset;
+  }
 }
 
 module.exports = new IssueStore();
