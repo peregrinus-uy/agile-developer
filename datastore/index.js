@@ -6,4 +6,4 @@ module.exports = {
   issueStore,
   severityStore,
   userStore
-}
+};

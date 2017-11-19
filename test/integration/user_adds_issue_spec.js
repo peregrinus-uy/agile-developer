@@ -7,9 +7,9 @@ describe('User adds a new issue', function() {
       url: '/test/seed',
       body: {
         title: 'foo',
-        description: 'bar',
+        description: 'bar'
       },
-      form: true,
+      form: true
     });
   });
 
