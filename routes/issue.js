@@ -3,8 +3,17 @@ const { issueStore, severityStore } = require('../datastore');
 const router = express.Router();
 
 router.get('/', function(req, res) {
-  const issues = issueStore.getAll();
-  res.render('issues/index', { issues });
+  let issues = issueStore.getAll();
+  const openIssues = issues.filter(issue => issue.status === 'open');
+  const closedIssues = issues.filter(issue => issue.status === 'closed');
+  const status = req.query.is;
+
+  if (status === 'open') {
+    issues = openIssues;
+  } else if (status === 'closed') {
+    issues = closedIssues;
+  }
+  res.render('issues/index', { issues, status, openCount: openIssues.length, closedCount: closedIssues.length });
 });
 
 router.get('/new', function(req, res) {
@@ -16,7 +25,9 @@ router.get('/new', function(req, res) {
 });
 
 router.post('/new', function(req, res) {
-  var changeset = issueStore.add(req.body.issue);
+  const issue = req.body.issue;
+  issue.status = 'open';
+  var changeset = issueStore.add(issue);
   const severities = severityStore.getAll();
 
   if (changeset.isValid()) {

@@ -8,7 +8,16 @@ const routes = require('./routes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.engine('.html', exphbs({ extname: '.html', defaultLayout: 'main.html' }));
+app.engine(
+	'.html',
+	exphbs({
+		extname: '.html',
+		defaultLayout: 'main.html',
+		helpers: {
+			isSelected: (val1, val2, className) => val1 === val2 && className
+		}
+	})
+);
 app.set('view engine', '.html');
 app.set('views', path.join(__dirname, 'views'));
 
