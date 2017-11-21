@@ -1,18 +1,4 @@
 describe('User adds a new issue', function() {
-  before(function() {
-    // Cleanup database
-    cy.request('POST', '/test/reset');
-    cy.request({
-      method: 'POST',
-      url: '/test/seed',
-      body: {
-        title: 'foo',
-        description: 'bar'
-      },
-      form: true
-    });
-  });
-
   it('User adds a new issue', function() {
     cy.visit('/issues');
     cy.get(selector('add-issue')).click();

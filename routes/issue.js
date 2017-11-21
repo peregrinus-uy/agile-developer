@@ -16,6 +16,17 @@ router.get('/', function(req, res) {
   res.render('issues/index', { issues, status, openCount: openIssues.length, closedCount: closedIssues.length });
 });
 
+router.post('/', function(req, res) {
+  const issue = req.body;
+  const changeset = issueStore.update(issue);
+
+  if (changeset.isValid()) {
+    res.redirect('/issues');
+  } else {
+    res.render('issues/new', { issue: changeset.entity, errors: changeset.errors, severities });
+  }
+});
+
 router.get('/new', function(req, res) {
   const issue = {};
   const errors = {};

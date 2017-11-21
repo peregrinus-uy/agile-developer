@@ -14,7 +14,7 @@ class BaseStore {
   }
 
   get(entity_id) {
-    return this.db.find(entity => entity.id === +entity_id);
+    return this.db.find(entity => entity.id === entity_id);
   }
 
   reset() {
@@ -23,6 +23,11 @@ class BaseStore {
 
   getAll() {
     return this.db;
+  }
+
+  update(entity) {
+    const original = this.db.find(e => e.id == entity.id);
+    return Object.assign(original, entity);
   }
 }
 
