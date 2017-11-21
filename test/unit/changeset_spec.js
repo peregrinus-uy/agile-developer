@@ -15,21 +15,21 @@ describe('Changeset', function() {
     });
 
     it('contains an empty errors object', function() {
-      const changeset = create({foo: 'bar'});
+      const changeset = create({ foo: 'bar' });
 
       expect(changeset.errors).to.eql({});
     });
 
     it('is valid', function() {
-      const changeset = create({foo: 'bar'});
+      const changeset = create({ foo: 'bar' });
 
-      expect(changeset.isValid()).to.be.true
+      expect(changeset.isValid()).to.be.true;
     });
   });
 
   context('.trimValue', function() {
     it('removes white spaces', function() {
-      const changeset = create({foo: 'bar    \n\r'});
+      const changeset = create({ foo: 'bar    \n\r' });
 
       trimValue(changeset, 'foo');
 
@@ -39,7 +39,7 @@ describe('Changeset', function() {
 
   context('.validateRequired', function() {
     it('sets an error when the field is an empty string', function() {
-      const changeset = create({foo: ''});
+      const changeset = create({ foo: '' });
 
       validateRequired(changeset, 'foo');
 
@@ -48,7 +48,7 @@ describe('Changeset', function() {
     });
 
     it('sets an error when the field is null', function() {
-      const changeset = create({foo: null});
+      const changeset = create({ foo: null });
 
       validateRequired(changeset, 'foo');
 
@@ -57,7 +57,7 @@ describe('Changeset', function() {
     });
 
     it('does not set an error when the field contains a value', function() {
-      const changeset = create({foo: 'bar'});
+      const changeset = create({ foo: 'bar' });
 
       validateRequired(changeset, 'foo');
 
