@@ -1,7 +1,7 @@
 module.exports = {
   create,
   trimValue,
-  validateRequired,
+  validateRequired
 };
 
 function create(entity) {

@@ -5,7 +5,7 @@ describe('User adds a new issue', function() {
 
     cy.get('[name="issue[title]"]').type('Blue screen in Windows Vista');
     cy.get('[name="issue[severity]"]').select('High');
-    cy.get('[name="issue[description]"').type('When I try to play solitaire in Windows, it crash with a blue screen');
+    cy.get('[name="issue[description]"').type('When I try to play solitaire in Windows, it crashes with a blue screen');
     cy.get('button').click();
 
     cy.contains('Blue screen in Windows Vista');
@@ -16,7 +16,7 @@ describe('User adds a new issue', function() {
 
     fillIn('title', 'Blue screen in Windows Vista');
     select('severity', 'High');
-    fillIn('description', 'When I try to play solitaire in Windows, it crash with a blue screen');
+    fillIn('description', 'When I try to play solitaire in Windows, it crashes with a blue screen');
 
     click('button');
 

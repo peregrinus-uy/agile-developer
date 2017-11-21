@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "b5a36117-1751-435c-a54c-1cbc9ba1a9dc",
     "title": "--watch does not have an ignore option",
     "description": "There is an infinite loop using webpack --watch - this seems to be a problem with webpack for the reasons listed below.",
     "authorId": 1,
@@ -8,7 +8,7 @@
     "status": "open"
   },
   {
-    "id": 2,
+    "id": "5d971f7f-a21a-4320-ad66-d4ff39c1c86e",
     "title": "Support transitive noparse",
     "description": "I would like to be able to indicate that a module must no be parsed inside the module itself.",
     "authorId": 2,
@@ -16,7 +16,7 @@
     "status": "open"
   },
   {
-    "id": 3,
+    "id": "43ec90a4-961c-4705-99eb-d6816b74bbf4",
     "title": "ProvidePlugin doesn't work on modules that have 'polyfill guards'",
     "description": "If a module polyfills an API, e.g. fetch, the module code might check if window.fetch is already defined:",
     "authorId": 2,

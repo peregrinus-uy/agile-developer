@@ -4,12 +4,13 @@
   --color-gray-light: #fbfbfb;
   --color-gray: #e0e0e0;
   --color-gray-dark: #444;
-  --color-red: #8E0000;
-  --color-red-dark: #3F0000;
+  --color-red: #8e0000;
+  --color-red-dark: #3f0000;
   --color-green: #598500;
   --color-green-dark: #426200;
   --color-border: #f0f0f0;
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   --padding-horizontal: 3rem;
 
   --alternate-background: #fbfbfb;
@@ -22,9 +23,21 @@
   box-sizing: border-box;
 }
 
-html, body, div, h1, h2, h3, p, span, ul, li, label, a, button {
-  padding:0;
-  margin:0;
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+span,
+ul,
+li,
+label,
+a,
+button {
+  padding: 0;
+  margin: 0;
 }
 
 ul {
@@ -59,10 +72,11 @@ body {
 /* responsive */
 @media (max-width: 730px) {
   :root {
-    --padding-horizontal: .5rem;
+    --padding-horizontal: 0.5rem;
   }
 
-  html, body {
+  html,
+  body {
     font-size: 12px;
   }
 }
@@ -121,7 +135,7 @@ body {
 
   background-color: var(--color-gray-dark);
   color: var(--color-white);
-  box-shadow: 0px 3px 3px rgba(0,0,0,.5);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
   font-size: 1.5rem;
   display: flex;
@@ -130,7 +144,7 @@ body {
 
 @media (max-width: 730px) {
   .header {
-    padding: .5rem .5rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 
@@ -138,10 +152,9 @@ body {
   padding-left: 1.5rem;
 }
 
-
 /* issue-list */
 .issue-list {
-  padding: .5rem var(--padding-horizontal);
+  padding: 0.5rem var(--padding-horizontal);
 }
 
 .issue-list__header {
@@ -188,7 +201,7 @@ body {
 
 /* issue */
 .issue {
-  padding: .5rem var(--padding-horizontal);
+  padding: 0.5rem var(--padding-horizontal);
 }
 
 .issue__severity {
@@ -210,7 +223,7 @@ body {
 
 /* dashboard */
 .dashboard {
-  padding: .5rem var(--padding-horizontal);
+  padding: 0.5rem var(--padding-horizontal);
 }
 
 /* title */
@@ -236,11 +249,11 @@ body {
 /* btn */
 .btn {
   display: inline-block;
-  padding: .5rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   border: 1px solid var(--color-border);
   border-radius: 3px;
   font-family: inherit;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   text-transform: none;
   text-align: center;
@@ -265,7 +278,7 @@ body {
 }
 
 .btn ~ .btn {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .btn--red {
@@ -322,5 +335,18 @@ body {
   .site-menu__items,
   .site-menu__item {
     display: inline-block;
+  }
+}
+
+/* gauges */
+.dashboard__gauges {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (max-width: 730px) {
+  .dashboard__gauges {
+    flex-direction: column;
   }
 }

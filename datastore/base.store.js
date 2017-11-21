@@ -1,4 +1,4 @@
-const uuid = require("uuid/v1");
+const uuid = require('uuid/v1');
 
 class BaseStore {
   constructor(data) {
@@ -14,7 +14,7 @@ class BaseStore {
   }
 
   get(entity_id) {
-    return this.db.find(entity => entity.id == entity_id);
+    return this.db.find(entity => entity.id === entity_id);
   }
 
   reset() {

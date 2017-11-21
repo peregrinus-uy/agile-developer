@@ -9,7 +9,10 @@
   <p>
     Show gauges: <br>
     % of closed issues <br>
-    % of open issues marked as blockers <br>
-    https://codepen.io/hpoydar/pen/MygORZ
   </p>
+  <div class="dashboard__gauges">
+    {{> gauge title="Critical" class="critical" percentage=criticalPercent}}
+    {{> gauge title="High" class="high" percentage=highPercent}}
+    {{> gauge title="Medium" class="medium" percentage=mediumPercent}}
+  </div>
 </section>
