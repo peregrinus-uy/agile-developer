@@ -1,4 +1,4 @@
-const issuesDB = require('../datastore/issue.store');
+const issuesDB = require('../models/issue.store');
 
 function loadRoutes(app) {
   app.get('/', function(req, res) {
