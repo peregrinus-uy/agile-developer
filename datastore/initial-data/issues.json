@@ -5,7 +5,8 @@
     "description": "There is an infinite loop using webpack --watch - this seems to be a problem with webpack for the reasons listed below.",
     "authorId": 1,
     "severity": "High",
-    "status": "open"
+    "status": "open",
+    "estimation": 1
   },
   {
     "id": "5d971f7f-a21a-4320-ad66-d4ff39c1c86e",
@@ -13,7 +14,8 @@
     "description": "I would like to be able to indicate that a module must no be parsed inside the module itself.",
     "authorId": 2,
     "severity": "Medium",
-    "status": "open"
+    "status": "open",
+    "estimation": 2
   },
   {
     "id": "43ec90a4-961c-4705-99eb-d6816b74bbf4",
@@ -21,6 +23,7 @@
     "description": "If a module polyfills an API, e.g. fetch, the module code might check if window.fetch is already defined:",
     "authorId": 2,
     "severity": "Low",
-    "status": "closed"
+    "status": "closed",
+    "estimation": 3
   }
 ]
