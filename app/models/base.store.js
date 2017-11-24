@@ -26,7 +26,7 @@ class BaseStore {
   }
 
   update(entity) {
-    const original = this.db.find(e => e.id == entity.id);
+    const original = this.db.find(e => e.id === entity.id);
     return Object.assign(original, entity);
   }
 }

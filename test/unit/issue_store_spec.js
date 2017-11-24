@@ -19,7 +19,7 @@ describe('issue.store', function() {
       expect(changeset.errors).to.eql({
         title: 'title is required.',
         description: 'description is required.',
-        severity: 'severity is required.',
+        severity: 'severity is required.'
       });
     });
 
@@ -55,7 +55,7 @@ describe('issue.store', function() {
     });
 
     it('trims the title', function() {
-      store.add(Object.assign({}, validAttributes, {title: '     title with spaces    '}));
+      store.add(Object.assign({}, validAttributes, { title: '     title with spaces    ' }));
 
       var issue = store.getAll()[0];
 
@@ -63,7 +63,7 @@ describe('issue.store', function() {
     });
 
     it('trims the description', function() {
-      store.add(Object.assign({}, validAttributes, {description: '     description with spaces    '}));
+      store.add(Object.assign({}, validAttributes, { description: '     description with spaces    ' }));
 
       var issue = store.getAll()[0];
 
@@ -75,7 +75,7 @@ describe('issue.store', function() {
     it('returns valid changeset', function() {
       var changeset = store.add(validAttributes);
       var id = changeset.entity.id;
-      var updateChangeset = store.update({id, title: 'updated title'});
+      var updateChangeset = store.update({ id, title: 'updated title' });
 
       expect(updateChangeset.isValid()).to.be.true;
       expect(updateChangeset.entity.title).to.eq('updated title');
@@ -84,11 +84,11 @@ describe('issue.store', function() {
     it('persists updated issue', function() {
       var changeset = store.add(validAttributes);
       var id = changeset.entity.id;
-      store.update({id, title: 'updated title'});
+      store.update({ id, title: 'updated title' });
 
       var issue = store.getAll()[0];
 
-      expect(issue).to.be.ok
+      expect(issue).to.be.ok;
       expect(issue.title).to.eq('updated title');
       expect(issue.description).to.eq(validAttributes.description);
     });
