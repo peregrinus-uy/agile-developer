@@ -19,7 +19,7 @@
   fill: #e74c3c;
 }
 
-/*  */
+/* High */
 .metric.high path.data-arc {
   stroke: #3498db;
 }
@@ -28,11 +28,20 @@
   fill: #3498db;
 }
 
-/*  */
+/* Medium */
 .metric.medium path.data-arc {
   stroke: #27ae60;
 }
 
 .metric.medium text {
   fill: #27ae60;
+}
+
+/* Closed */
+.metric.closed path.data-arc {
+  stroke: #14aecf;
+}
+
+.metric.closed text {
+  fill: #14aecf;
 }
