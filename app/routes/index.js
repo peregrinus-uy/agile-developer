@@ -6,7 +6,8 @@ function loadRoutes(app) {
   });
 
   app.get('/dashboard', function(req, res) {
-    const issues = issuesDB.getAll();
+    const issues = issuesDB.getAllOpen();
+
     const criticalIssues = issues.filter(issue => issue.severity === 'Critical');
     const highIssues = issues.filter(issue => issue.severity === 'High');
     const mediumIssues = issues.filter(issue => issue.severity === 'Medium');
@@ -20,14 +21,10 @@ function loadRoutes(app) {
     });
   });
 
-  app.post('/session', function(req, res) {
-    res.send('12345');
-  });
-
   app.use('/issues', require('./issue'));
 
   // FIXME: Test to enable only on test.
-  // if (process.env.NODE_ENV === 'test') {
+
   app.post('/test/reset', function(req, res) {
     issuesDB.reset();
 

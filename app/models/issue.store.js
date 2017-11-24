@@ -29,6 +29,10 @@ class IssueStore extends BaseStore {
     changeset.entity = super.update(changeset.entity);
     return changeset;
   }
+
+  getAllOpen() {
+    return this.getAll().filter(issue => issue.status === "open");
+  }
 }
 
 module.exports = new IssueStore();

@@ -30,3 +30,12 @@ Cypress.Commands.add('dataTest', (selector) => {
 Cypress.Commands.add('field', (selector) => {
   return cy.get(`[name="issue[${selector}]"]`);
 });
+
+Cypress.Commands.add('fixture', (issue) => {
+  return cy.request({
+    method: 'POST',
+    url: '/test/seed',
+    body: issue,
+    form: true
+  });
+});
