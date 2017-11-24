@@ -1,4 +1,4 @@
-import { create, trimValue, validateRequired } from '../../datastore/changeset.js';
+import { create, trimValue, validateRequired } from '../../app/models/changeset';
 
 // Assertion library
 // https://docs.cypress.io/guides/references/assertions.html#BDD-Assertions

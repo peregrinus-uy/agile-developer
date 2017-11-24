@@ -5,7 +5,6 @@
 </h1>
 
 <section class="dashboard">
-  <a href="/issues">View issues</a>
   <div class="dashboard__panel">
     <h3>Issues by severity</h3>
 
@@ -17,10 +16,10 @@
   </div>
 
   <div class="dashboard__panel">
-      <h3>Closed issues</h3>
+    <h3>Closed issues</h3>
 
-      <div class="dashboard__gauges">
-          {{> gauge title="Closed" class="closed" percentage=closedPercent}}
-      </div>
+    <div class="dashboard__gauges">
+      {{> gauge title="Closed" class="closed" percentage=closedPercent}}
     </div>
+  </div>
 </section>

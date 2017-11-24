@@ -2,6 +2,7 @@
   flex: 1;
   max-width: 350px;
   padding: 10px;
+  margin: 0 auto;
 }
 
 .metric path {

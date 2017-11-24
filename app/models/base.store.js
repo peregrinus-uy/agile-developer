@@ -6,7 +6,7 @@ class BaseStore {
   }
 
   add(original) {
-    const entity = Object.assign({}, original, { id: uuid() });
+    const entity = Object.assign({}, original, { id: uuid().substring(0, 6) });
 
     this.db.push(entity);
 
