@@ -1,26 +1,43 @@
-<h1 class="title">
-  <span class="title__label">
-    Dashboard
-  </span>
-</h1>
+<!DOCTYPE html>
+<html>
 
-<section class="dashboard">
-  <a href="/issues">View issues</a>
-  <div class="dashboard__panel">
-    <h3>Issues by severity</h3>
+<head>
+  <title>Reporte de incidentes</title>
+  <link href="/app.css" rel="stylesheet">
+</head>
 
-    <div class="dashboard__gauges">
-      {{> gauge title="Critical" class="critical" percentage=criticalPercent}}
-      {{> gauge title="High" class="high" percentage=highPercent}}
-      {{> gauge title="Medium" class="medium" percentage=mediumPercent}}
+<body>
+  <div class="layout">
+    <div class="layout__header">
+      <header class="header"></header>
+    </div>
+    <div class="layout__body">
+      <main class="body body--center">
+        <h1 class="title">
+          <span class="title__label">
+            Welcome to Ostrich Bug Tracking System
+          </span>
+        </h1>
+
+        <section class="dashboard">
+          <section class="call-to-action">
+            <img src="/images/logo.svg" width="150px" alt="logo" class="call-to-action__logo">
+            <ul class="call-to-action__options">
+              <li>
+                <a href="/dashboard">Dashboard</a>
+              </li>
+              <li>
+                <a href="/issues">Issues</a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </main>
+    </div>
+    <div class="layout__footer">
+      <footer class="footer">
+      </footer>
     </div>
   </div>
-
-  <div class="dashboard__panel">
-      <h3>Closed issues</h3>
-
-      <div class="dashboard__gauges">
-          {{> gauge title="Closed" class="closed" percentage=closedPercent}}
-      </div>
-    </div>
-</section>
+</body>
+</html>
