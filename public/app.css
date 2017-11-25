@@ -241,6 +241,25 @@ body {
   padding: 0.5rem var(--padding-horizontal);
 }
 
+.dashboard__panel.open__issues {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  align-items: center;
+  width: 190px;
+  padding: 5px;
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+}
+
+.dashboard__panel.open__issues .issues--count {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
 /* call-to-action */
 .call-to-action {
   display: flex;
@@ -389,3 +408,4 @@ body {
     display: block;
   }
 }
+

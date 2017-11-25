@@ -9,12 +9,14 @@ router.get('/', function(req, res) {
   const highIssues = issues.filter(issue => issue.severity === 'High');
   const mediumIssues = issues.filter(issue => issue.severity === 'Medium');
   const closed = issues.filter(issue => issue.status === 'closed');
+  const openCount = issues.filter(issue => issue.status === 'open');
 
   res.render('dashboard', {
     criticalPercent: criticalIssues.length / issues.length,
     highPercent: highIssues.length / issues.length,
     mediumPercent: mediumIssues.length / issues.length,
-    closedPercent: closed.length / issues.length
+    closedPercent: closed.length / issues.length,
+    openCount: openCount.length
   });
 });
 
