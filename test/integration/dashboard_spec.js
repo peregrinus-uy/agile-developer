@@ -3,6 +3,11 @@ describe('Dashboard', function() {
     cy.visit('/dashboard');
 
     cy
+      .dataTest('open-count')
+      .should('exist')
+      .should('contain', '1');
+
+    cy
       .dataTest('critical-gauge')
       .should('exist')
       .should('contain', '100%')
@@ -31,6 +36,11 @@ describe('Dashboard', function() {
     cy.get('button').click();
 
     cy.visit('/dashboard');
+
+    cy
+      .dataTest('open-count')
+      .should('exist')
+      .should('contain', '2');
 
     cy
       .dataTest('critical-gauge')
@@ -62,6 +72,11 @@ describe('Dashboard', function() {
     cy.visit('/dashboard');
 
     cy
+      .dataTest('open-count')
+      .should('exist')
+      .should('contain', '2');
+
+    cy
       .dataTest('critical-gauge')
       .should('exist')
       .should('contain', '50%')
@@ -86,6 +101,11 @@ describe('Dashboard', function() {
     cy.dataTest('close').click();
 
     cy.visit('/dashboard');
+
+    cy
+      .dataTest('open-count')
+      .should('exist')
+      .should('contain', '1');
 
     cy
       .dataTest('critical-gauge')
