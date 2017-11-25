@@ -11,12 +11,12 @@ function dummyIssue(attrs) {
     title: `dummy issue ${counter}`,
     description: `dummy description ${counter}`,
     authorId: 1,
-    severity: "High",
-    status: "open",
+    severity: 'High',
+    status: 'open',
     estimation: 1
   };
 
-  return Object.assign(dummyIssue, attrs);  
+  return Object.assign(dummyIssue, attrs);
 }
 
 // FIXME: Test to enable only on test.
