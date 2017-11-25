@@ -38,9 +38,9 @@ describe('Dashboard', function() {
     cy.visit('/dashboard');
 
     cy
-    .dataTest('open-count')
-    .should('exist')
-    .should('contain', '2');
+      .dataTest('open-count')
+      .should('exist')
+      .should('contain', '2');
 
     cy
       .dataTest('critical-gauge')
