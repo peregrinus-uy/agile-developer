@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const issuesDB = require('../models/issue.store');
 
-var counter = 0;
+let counter = 0;
 
 function dummyIssue(attrs) {
   counter++;
