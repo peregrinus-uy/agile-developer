@@ -20,7 +20,7 @@ import './commands';
 // require('./commands')
 beforeEach(function() {
   // Cleanup database
-  cy.request('POST', '/test/reset');
+  cy.resetDB();
   cy.fixture({
     title: 'Unable to add new item to my cart',
     description: 'Hence unable to buy stuff',

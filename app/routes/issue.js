@@ -13,7 +13,13 @@ router.get('/', function(req, res) {
   } else if (status === 'closed') {
     issues = closedIssues;
   }
-  res.render('issues/index', { issues, status, openCount: openIssues.length, closedCount: closedIssues.length });
+
+  res.render('issues/index', {
+    issues,
+    status,
+    openCount: openIssues.length,
+    closedCount: closedIssues.length
+  });
 });
 
 router.post('/', function(req, res) {
