@@ -3,23 +3,8 @@ const { issueStore, severityStore } = require('../models');
 const router = express.Router();
 
 router.get('/', function(req, res) {
-  let issues = issueStore.getAll();
-  const openIssues = issues.filter(issue => issue.status === 'open');
-  const closedIssues = issues.filter(issue => issue.status === 'closed');
-  const status = req.query.is;
-
-  if (status === 'open') {
-    issues = openIssues;
-  } else if (status === 'closed') {
-    issues = closedIssues;
-  }
-
-  res.render('issues/index', {
-    issues,
-    status,
-    openCount: openIssues.length,
-    closedCount: closedIssues.length
-  });
+  const issues = issueStore.getAll();
+  res.render('issues/index', { issues });
 });
 
 router.post('/', function(req, res) {

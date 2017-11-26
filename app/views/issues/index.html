@@ -5,19 +5,6 @@
 </h1>
 
 <section class="issue-list">
-
-  <div class="issue-list__header">
-    <span>
-      <a href="/issues?is=open" class={{isSelected status 'open' 'selected'}} data-test-filter-open>
-        {{openCount}} Open
-      </a>
-      /
-      <a href="/issues?is=closed" class={{isSelected status 'closed' 'selected'}} data-test-filter-closed>
-        {{closedCount}} Closed
-      </a>
-    </span>
-  </div>
-
   <ul>
   {{#each issues}}
     <li class="issue-item">
