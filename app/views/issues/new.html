@@ -16,20 +16,6 @@
     </div>
 
     <div class="form__field">
-      <select name="issue[severity]" class="form__select">
-        <option value="">Severity...</option>
-        {{#each severities}}
-        <option value="{{this}}">{{this}}</option>
-        {{/each}}
-      </select>
-      {{#if errors.severity}}
-        <span class="form__error">
-          {{errors.severity}}
-        </span>
-      {{/if}}
-    </div>
-
-    <div class="form__field">
       <textarea name="issue[description]" placeholder="Description..." class="form__textarea" rows="10">{{issue.description}}</textarea>
 
       {{#if errors.description}}

@@ -18,8 +18,7 @@ describe('issue.store', function() {
 
       expect(changeset.errors).to.eql({
         title: 'title is required.',
-        description: 'description is required.',
-        severity: 'severity is required.'
+        description: 'description is required.'
       });
     });
 

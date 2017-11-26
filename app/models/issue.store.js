@@ -14,7 +14,6 @@ class IssueStore extends BaseStore {
     trimValue(changeset, 'description');
     validateRequired(changeset, 'title');
     validateRequired(changeset, 'description');
-    validateRequired(changeset, 'severity');
 
     if (changeset.isValid()) {
       changeset.entity = super.add(changeset.entity);
