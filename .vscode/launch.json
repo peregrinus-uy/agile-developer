@@ -8,17 +8,20 @@
       "type": "node",
       "request": "launch",
       "name": "Launch app",
-      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon",
-      "program": "${workspaceFolder}/index.js",
-      "restart": true,
-      "internalConsoleOptions": "neverOpen"
+      "cwd": "${workspaceRoot}",
+      "runtimeArgs": [
+        "index.js"
+      ]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Run tests",
-      "program": "${workspaceFolder}/test/run.js",
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "cwd": "${workspaceRoot}",
+      "runtimeArgs": [
+        "test/run.js"
+      ]
     }
   ]
 }
