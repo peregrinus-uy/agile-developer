@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "node test/run.js",
-    "lint": "eslint . --ext .js --ignore-path .gitignore --cache"
+    "lint": "eslint . --ext .js --ignore-path .gitignore --cache --max-warnings=0",
+    "fix": "eslint . --ext .js --ignore-path .gitignore --cache --fix"
   },
   "repository": {
     "type": "git",
