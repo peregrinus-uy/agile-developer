@@ -1,0 +1,19 @@
+<h1 class="title">
+  <span class="title__label">
+    Issues
+  </span>
+</h1>
+
+<section class="issue-list">
+  <div class="issue-list__header">
+  </div>
+  <ul>
+  {{#each issues}}
+    <li class="issue-item">
+      <a href="/issues/{{id}}" class="issue-item__link">
+        {{title}}
+      </a>
+    </li>
+  {{/each}}
+  </ul>
+</section>

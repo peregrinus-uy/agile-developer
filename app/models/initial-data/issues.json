@@ -1,0 +1,29 @@
+[
+  {
+    "id": "b5a361",
+    "title": "Application crash on clicking the SAVE button while creating a new user.",
+    "description": "Hence unable to create a new user in the application. Steps to reproduce: 1. Log into the application 2. Navigate to the users menu and click new user 3. Fill user information fields 4. Click save",
+    "authorId": 1,
+    "severity": "High",
+    "status": "open",
+    "estimation": 1
+  },
+  {
+    "id": "5d971f",
+    "title": "Unable to add new item to my cart",
+    "description": "Hence unable to buy stuff",
+    "authorId": 2,
+    "severity": "Medium",
+    "status": "open",
+    "estimation": 2
+  },
+  {
+    "id": "43ec90",
+    "title": "The price mentioned on the pricing page is not correct",
+    "description": "Steps to reproduce: Go to the princing page, it says the basic plan is $25 but it should be $29.",
+    "authorId": 2,
+    "severity": "Low",
+    "status": "closed",
+    "estimation": 3
+  }
+]

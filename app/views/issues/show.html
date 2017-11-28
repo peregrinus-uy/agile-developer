@@ -1,0 +1,26 @@
+<h1 class="title">
+  <span class="title__label">
+    {{issue.title}}
+  </span>
+</h1>
+
+<section class="issue">
+  <form action="/issues" method="post">
+    <input type="hidden" name="id" value={{issue.id}} />
+    <div>
+      Status:
+      <span class="issue__status">{{issue.status}}</span>
+    </div>
+    <p class="issue__description">
+      {{issue.description}}
+
+      <i>{{issue.label}}</i>
+    </p>
+
+    <div class="issue__actions">
+      <a href="/issues" class="btn" title="volver">
+        Back
+      </a>
+    </div>
+  </form>
+</section>

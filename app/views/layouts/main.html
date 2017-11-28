@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ostrich Bug Tracking System</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/gauge.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="layout">
+    <div class="layout__header">
+      <header class="header">
+        <a href="/" alt="Home"><img src="/images/logo.svg" class="header__logo" /></a>
+        <span class="header__name">
+          Ostrich Bug Tracking System
+        </span>
+      </header>
+    </div>
+    <div class="layout__body">
+      <aside class="aside">
+        <nav class="site-menu">
+          <h2 class="site-menu__title">Menu</h2>
+          <ul class="site-menu__items">
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="/dashboard" data-test-dashboard>
+                Dashboard
+              </a>
+            </li>
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="/issues" data-test-all-issues>
+                All issues
+              </a>
+            </li>
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="/issues/new" data-test-add-issue>
+                Add new issue
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="body">
+        {{{body}}}
+      </main>
+    </div>
+    <div class="layout__footer">
+      <footer class="footer">
+      </footer>
+    </div>
+  </div>
+  <script src="/scripts/gauge.js"></script>
+</body>
+
+</html>
