@@ -31,6 +31,10 @@ class IssueStore extends BaseStore {
   getAllOpen() {
     return this.getAll().filter(issue => issue.status === 'open');
   }
+
+  getAllClosed() {
+    return this.getAll().filter(issue => issue.status === 'closed');
+  }
 }
 
 module.exports = new IssueStore();
