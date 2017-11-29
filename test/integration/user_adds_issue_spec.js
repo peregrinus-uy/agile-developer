@@ -12,7 +12,7 @@ describe('New issues', function() {
     cy.get('[name="issue[estimation]"]')
       .select('13');
 
-    // cy.get('[name="issue[severity]"]').select('High');
+     cy.get('[name="issue[severity]"]').select('High');
 
     cy.get('[name="issue[description]"]')
       .type('When I try to play solitaire in Windows, it crashes with a blue screen');
@@ -25,8 +25,8 @@ describe('New issues', function() {
 
     cy.contains('Estimation').should('exist');
     cy.contains('13').should('exist');
-    // cy.contains('Severity').should('exist');
-    // cy.contains('High').should('exist');
+     cy.contains('Severity').should('exist');
+     cy.contains('High').should('exist');
   });
 
 });
