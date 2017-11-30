@@ -1,4 +1,4 @@
-describe('New issues', function() {
+describe('New issues', function()  {
 
   it('User adds a new issue', function() {
     cy.visit('/issues');

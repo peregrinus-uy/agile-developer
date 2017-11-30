@@ -16,6 +16,28 @@
     </div>
 
     <div class="form__field">
+      <select name="issue[estimation]">
+
+      <option>1</option>
+      <option>3</option>
+      <option>5</option>
+      <option>7</option>
+      <option>11</option>
+      <option>13</option>
+      <option>21</option>
+      </select>
+  </div>
+
+  <div class="form__field">
+    <select name="issue[severity]">
+
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+    </select>
+</div>
+
+    <div class="form__field">
       <textarea name="issue[description]" placeholder="Description..." class="form__textarea" rows="10">{{issue.description}}</textarea>
 
       {{#if errors.description}}
@@ -24,6 +46,7 @@
         </span>
       {{/if}}
     </div>
+
 
     <div class="form__actions">
       <a href="/issues" class="btn">
