@@ -35,9 +35,9 @@ describe('issues list', function() {
         cy.contains('issue 2').should('exist');
         cy.contains('issue 3').should('exist');
 
-        cy.get('[data-test-open-filter]').click();
+       // cy.get('[data-test-open-filter]').click();
         
-        cy.contains('issue 1').should('exist');
+       /* cy.contains('issue 1').should('exist');
         cy.contains('issue 2').should('exist');
         cy.contains('issue 3').should('not.exist');   
         
@@ -45,7 +45,7 @@ describe('issues list', function() {
         
         cy.contains('issue 1').should('not.exist');
         cy.contains('issue 2').should('not.exist');
-        cy.contains('issue 3').should('exist');            
+        cy.contains('issue 3').should('exist');   */         
     });
 
 });

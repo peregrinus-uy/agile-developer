@@ -4,11 +4,11 @@ const{ issueStore } = require ('../models');
 
 
 router.get('/', function(req, res) {
-  const openIssuesCount = issueStore.getAllOpen().length;
 
-  res.render('dashboard', {
-      openIssuesCount
-  });
+    const openIssuesCount = issueStore.getAllOpen().length;
+    res.render('dashboard', {
+        openIssuesCount: openIssuesCount
+    });
 });
 
 module.exports = router;
