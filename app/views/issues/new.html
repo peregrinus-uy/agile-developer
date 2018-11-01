@@ -16,33 +16,6 @@
     </div>
 
     <div class="form__field">
-      <select name="issue[severity]" class="form__select">
-        <option value="">Severity...</option>
-        {{#each severities}}
-        <option value="{{this}}">{{this}}</option>
-        {{/each}}
-      </select>
-      {{#if errors.severity}}
-        <span class="form__error">
-          {{errors.severity}}
-        </span>
-      {{/if}}
-    </div>
-
-    <div class="form__field">
-      <select name="issue[estimation]" class="form__select">
-        <option value="">Estimation...</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="5">5</option>
-        <option value="8">8</option>
-        <option value="13">13</option>
-        <option value="21">21</option>
-      </select>
-    </div>
-
-    <div class="form__field">
       <textarea name="issue[description]" placeholder="Description..." class="form__textarea" rows="10">{{issue.description}}</textarea>
 
       {{#if errors.description}}

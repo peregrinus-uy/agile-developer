@@ -5,24 +5,5 @@
 </h1>
 
 <section class="dashboard">
-  <div class="dashboard__panel open__issues">
-    <div class="issues--count" data-test-open-count>{{openCount}}</div>
-    <div>OPEN ISSUES</div>
-  </div>
-  <div class="dashboard__panel">
-    <h3>Issues by severity</h3>
 
-    <div class="dashboard__gauges">
-      {{> gauge title="Critical" class="critical" percentage=criticalPercent}} {{> gauge title="High" class="high" percentage=highPercent}}
-      {{> gauge title="Medium" class="medium" percentage=mediumPercent}}
-    </div>
-  </div>
-
-  <div class="dashboard__panel">
-    <h3>Closed issues</h3>
-
-    <div class="dashboard__gauges">
-      {{> gauge title="Closed" class="closed" percentage=closedPercent}}
-    </div>
-  </div>
 </section>

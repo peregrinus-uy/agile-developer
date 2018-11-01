@@ -7,15 +7,6 @@
 <section class="issue">
   <form action="/issues" method="post">
     <input type="hidden" name="id" value={{issue.id}} />
-    <input type="hidden" name="status" value="closed" />
-    <div>
-      Severity:
-      <span class="issue__severity">{{issue.severity}}</span>
-    </div>
-    <div>
-      Estimation:
-      <span>{{issue.estimation}}</span>
-    </div>
     <div>
       Status:
       <span class="issue__status">{{issue.status}}</span>
@@ -30,11 +21,6 @@
       <a href="/issues" class="btn" title="volver">
         Back
       </a>
-      {{#equal issue.status "open"}}
-      <button class="btn btn--red" data-test-close>
-        Close
-      </button>
-      {{/equal}}
     </div>
   </form>
 </section>

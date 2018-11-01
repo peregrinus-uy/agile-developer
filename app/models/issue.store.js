@@ -14,7 +14,6 @@ class IssueStore extends BaseStore {
     trimValue(changeset, 'description');
     validateRequired(changeset, 'title');
     validateRequired(changeset, 'description');
-    validateRequired(changeset, 'severity');
 
     if (changeset.isValid()) {
       changeset.entity = super.add(changeset.entity);
@@ -31,6 +30,10 @@ class IssueStore extends BaseStore {
 
   getAllOpen() {
     return this.getAll().filter(issue => issue.status === 'open');
+  }
+
+  getAllClosed() {
+    return this.getAll().filter(issue => issue.status === 'closed');
   }
 }
 
