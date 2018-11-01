@@ -5,8 +5,8 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      hostname: "localhost",
-      database: 'agile_developer_dev',
+      hostname: 'localhost',
+      database: 'agile_developer_dev'
     },
     pool: {
       min: 2,
@@ -20,7 +20,7 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'agile_developer_dev',
+      database: 'agile_developer_staging',
       user:     'username',
       password: 'password'
     },
@@ -36,7 +36,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'agile_developer_dev',
+      database: 'agile_developer',
       user:     'username',
       password: 'password'
     },
