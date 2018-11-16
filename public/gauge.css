@@ -12,29 +12,29 @@
 }
 
 /* Critical */
-.metric.critical path.data-arc {
+.metric.high path.data-arc {
   stroke: #e74c3c;
 }
 
-.metric.critical text {
+.metric.high text {
   fill: #e74c3c;
 }
 
 /* High */
-.metric.high path.data-arc {
+.metric.medium path.data-arc {
   stroke: #3498db;
 }
 
-.metric.high text {
+.metric.medium text {
   fill: #3498db;
 }
 
 /* Medium */
-.metric.medium path.data-arc {
+.metric.low path.data-arc {
   stroke: #27ae60;
 }
 
-.metric.medium text {
+.metric.low text {
   fill: #27ae60;
 }
 
