@@ -39,6 +39,7 @@ Cypress.Commands.add('fixture', (issue) => {
     form: true
   });
 });
+
 Cypress.Commands.add('resetDB', () => {
   return cy.request('POST', '/test/reset');
 });

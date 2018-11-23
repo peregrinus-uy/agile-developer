@@ -1,3 +1,2 @@
 describe('Dashboard', function() {
-
 });
