@@ -151,7 +151,6 @@ body {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  object-position: center 5px;
   border-radius: 70px;
   border: 1px solid gray;
   background: white;
