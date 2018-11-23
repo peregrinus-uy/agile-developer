@@ -7,21 +7,24 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch app",
-      "cwd": "${workspaceRoot}",
-      "runtimeArgs": [
-        "index.js"
-      ]
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/index.js"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Run tests",
       "console": "integratedTerminal",
-      "cwd": "${workspaceRoot}",
-      "runtimeArgs": [
-        "test/run.js"
-      ]
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/test/run.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Open tests",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/test/open.js"
     }
   ]
 }

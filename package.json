@@ -1,5 +1,6 @@
 {
   "name": "reporte-de-incidentes",
+  "private": true,
   "version": "1.0.0",
   "description": "Peregrinus: reporte de incidentes",
   "main": "app.js",
