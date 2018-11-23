@@ -1,5 +1,4 @@
 describe('New issues', function() {
-
   it('User adds a new issue', function() {
     cy.visit('/issues');
 
@@ -28,5 +27,4 @@ describe('New issues', function() {
     // cy.contains('Severity').should('exist');
     // cy.contains('High').should('exist');
   });
-
 });
