@@ -17,6 +17,14 @@
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/test/run.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Open tests",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/test/open.js"
     }
   ]
 }
