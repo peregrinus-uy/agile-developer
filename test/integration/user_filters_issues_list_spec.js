@@ -4,12 +4,13 @@ describe('issues list', function() {
       title: 'lorem ipsum'
     });
     cy.fixture({
-      title: 'foo bar'
+      title: 'foo bar',
+      status: 'closed'
     });
 
     cy.visit('/issues');
 
-    cy.contains('lorem ipsum').should('exist');
-    cy.contains('foo bar').should('exist');
+    cy.contains('lorem ipsum').contains('open').should('exist');
+    cy.contains('foo bar').contains('closed').should('exist');
   });
 });
