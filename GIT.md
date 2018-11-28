@@ -60,3 +60,11 @@ $ git log
 
 $ git merge change-title
 $ git log
+
+## Pull / Push
+
+$ # Get changes from github (for master branch)
+$ git pull origin master
+
+$ # Send our changes to github (for foo branch)
+$ git push origin foo
