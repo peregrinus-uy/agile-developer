@@ -213,6 +213,19 @@ body {
   text-decoration: none;
 }
 
+.issue-item__status {
+  background-color: gray;
+  border-radius: 3px;
+  border: 1px solid gray;
+  color: white;
+  display: inline-block;
+  font-size: 8px;
+  font: monospace;
+  margin-left: 10px;
+  padding: 2px 3px;
+  text-transform: uppercase;
+}
+
 /* issue */
 .issue {
   padding: 0.5rem var(--padding-horizontal);
