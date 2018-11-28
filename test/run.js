@@ -8,7 +8,7 @@ const server = app.listen(3001, () => {
     return server.close(() => {
       // We need to end the process with an error code if there are failures.
       // This is used by the CI server to mark the build as failed.
-      if (results.failures) {
+      if (results.totalFailed > 0) {
         process.exit(1);
       } else {
         process.exit(0);
