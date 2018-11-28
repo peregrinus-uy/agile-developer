@@ -1,7 +1,20 @@
 const cypress = require('cypress');
-const app = require('../app');
+const nodemon = require('nodemon');
 
-const server = app.listen(3001, () => {
-  console.info('Running tests on port 3001...');
-  return cypress.open().then(process.exit);
+nodemon({
+  script: 'index.js',
+  ext: 'js',
+  env: {
+    "PORT": 3001
+  }
+});
+
+nodemon.on('start', function () {
+  console.log('Nodemon started');
+  cypress.open().then(process.exit);
+}).on('quit', function () {
+  console.log('Nodemon stopped');
+  process.exit();
+}).on('restart', function (files) {
+  console.log('Nodemon restarted due to: ', files);
 });
