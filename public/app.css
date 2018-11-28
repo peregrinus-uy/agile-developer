@@ -368,6 +368,10 @@ body {
   overflow: auto;
 }
 
+.form__error {
+  color: tomato;
+}
+
 /* site-menu */
 .site-menu {
   padding: 20px;
